@@ -101,7 +101,9 @@ There are 3 modes in VIM :
 2. INSERT MODE :
 i          : to insert command
 A          : end of the line   (ensure that you are outside of insert mode)
+$          : end of the line
 I          : starting of line  (ensure that you are outside of insert mode)
+0          : starting of the line
 O          : create new line above existing
 o          : create new line below existing
 
