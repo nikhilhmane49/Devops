@@ -5,6 +5,15 @@
           -> CPU information = command : lscpu or cat /proc/cpuinfo
           -> Memory information = command : lsmem or cat /proc/meminfo
 4. How to check server performance?  -> command : top or htop 
+5. For example there is a log file and in that i want to search an error how can i do it ?
+          -> indirectly asked Q -> command : cat file_name | grep error(word) -i
+
+
+
+
+---------------------------------------------------------------------
+
+** without user we can not login to server **
 
 AWS : EC2 INSTANCES = ELASTIC COMPUTE CLOUD
 TO CREATE EC2 WE NEED TO PERFORM 7 STEPS:
@@ -19,7 +28,7 @@ SERVER : COMPUTER
 7. SUMMARY = TO REVIEW
 
 
-==================================-- 04 --
+------------------------------------------------------------------------ 04 --
 
 OS = USED TO COMMUNICATE WITH SERVERS / SYSTEMS
 TYPES :
@@ -46,7 +55,7 @@ lsblk                     : to show volume information
 df // df -m // df -i      : to show volume information
 ifconfig / ip addr / ip addr show / hostname -i  : to show the ip address
 
-================================-- 05 --
+--------------------------------------------------- 05 --
 
 FILE COMMANDS :
 touch file1           : to create a file
@@ -75,8 +84,8 @@ tail -15 file1  : shows last 15 lines a file
 sed -n '5,15p' file1  : to print line5 to 15    (-n = numbers of lines    p = print)
 wc  : to show lines, words & characters
 
-----------------------------------------------------------------
-==========================-- 06 --
+-------------------------------------------------------
+--------------------------------------------------------------------- 06 --
 
 EDITORS : to edit the files
 Types:
@@ -101,9 +110,7 @@ There are 3 modes in VIM :
 2. INSERT MODE :
 i          : to insert command
 A          : end of the line   (ensure that you are outside of insert mode)
-$          : end of the line
 I          : starting of line  (ensure that you are outside of insert mode)
-0          : starting of the line
 O          : create new line above existing
 o          : create new line below existing
 
@@ -111,6 +118,7 @@ o          : create new line below existing
 gg               : top of the file
 shift g          : last line of file
 :set number      : to show number of lines inside file
+cat -n file1     : to show the number of lines outside from file
 :n               : to go to specific line
 yy               : to copy a line
 10yy             : to copy 10 lines
@@ -121,3 +129,67 @@ dd               : to delete
 u                :undo
 ctrl r           :redo
 /word            : to search for a word
+=====================================================
+
+PERMISSIONS : 
+-rw-r--r--
+
+Types of FILE :
+-          : regular file
+b          : blocked file
+c          : character file
+d          : directory (folder)
+l          : link file
+
+PERMISSIONS :
+
+read        : r : 4
+write       : w : 2
+executable  : x : 1
+
+CATEGORIES :
+user    : rw-   : 6     (come under user category) (r+w = 4+2 = 6)
+group   : r--   : 4   
+others  : r--   : 4
+
+METHOD 1(numerical)    : chmod 567 file1
+METHOD 2(alphabetical) : chmod u=rwx,g=rw,o=rx          (u-user,g-group,o-oathers)
+----------------------------------------------------------
+
+----------------------------------------------------------------- 07 --
+
+GREP : Global Regular Expression Print
+-> to search the words in a file
+
+grep karan file1                  : to search for karan word
+grep karan file1 -i               : to search for karan word (-i : avoid case sensitive)
+grep karan file1 -ic              : to count for karan word (-c : to check how many times karan word is repeating i.e. count)
+grep karan file1 -v               : to print lines without karan word (-v : to avoid)
+grep 'word1\|word2\|word3' file1  : to search multiple words at a time
+cat file1 | grep karan  :
+->   | : pipe symbol : here 1st command is the input for second command
+
+==========================================================================
+cat -n file1                           : to show the number of lines outside from file 
+
+SED : STREAM EDITOR   (sed command will replace a word occuring in single time in line)
+-> to used to replace the words in file.
+
+sed 's/word1/word2/'                   : to replace word1 with word2
+sed 's/devops/aws/;s/karan/prasad/'    : to replace multiple words
+sed '2c who am i' file1                : to replace a line
+sed -n '5,12p' file1                   : to print from line 5 to 12
+  * Optional *
+    cat file1 | sed -n '5,12p'         : to print from line 5 to 12
+    cat -n file1 | sed -n '5,12p'      : to print from line 5 to 12 wtih index number
+sed -n '10p' file1                     : to print particular line number 10 
+
+:%s/word1/word2/        : to replace a word1 with word2 inside the file.   (% means filter out)
+:%s/word1/word2/g       :  to repalce same word occuring multiple times in single line
+
+=====================================================================================
+
+
+
+
+
