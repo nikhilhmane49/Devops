@@ -188,8 +188,27 @@ sed -n '10p' file1                     : to print particular line number 10
 :%s/word1/word2/g       :  to repalce same word occuring multiple times in single line
 
 =====================================================================================
+------------------------------users & groups:
+to work with server we need to login as user.
+
+ec2-user : default
+root : admin (he has all permissions)
+
+useradd raham : to create user
+cat /etc/passwd : to list users
+passwd raham : to set password
 
 
+passwd:
+1)it will not be exposed.
+2)username will not be given as password.
+3)min 8 char
 
+NORMAL USER TO SUPER USER:
 
+useradd raham  
+passwd raham  
+visudo --> :100 --> yy & p --> root=raham --> save  
+su - raham  
+sudo useradd viiav  
 
