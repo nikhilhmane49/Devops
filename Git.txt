@@ -1,5 +1,5 @@
 
-Here's the text extracted from your image:
+=========================Introduction 
 
 GIT: GLOBAL INFORMATION TRACKER.
 
@@ -41,14 +41,15 @@ EX: GIT: it can store code on Multiple repo.
 
 ROLLBACK: Going back to the previous version of the application.
 
-STAGES:
+
+==========================STAGES:
 WORKING DIRECTORY: where we write our source code.
 STAGING AREA: we track files here.
 REPOSITORY: where we store tracked source code.
 
 
 
-WORKING WITH GIT:
+========================WORKING WITH GIT:
 
 create a ec2 server:
 mkdir swiggy
@@ -59,7 +60,7 @@ yum install git -y   [yum=pkg manager, install=action, git=pkg name, -y=yes]
 git -v               : to check version
 git init             : to install .git (local repo)
 
-Steps to create and manage a file in Git:
+===============================Steps to create and manage a file in Git:
 
 To create a file: vim index.html (content is opt)
 
@@ -79,4 +80,38 @@ To show commits: git log
 To show last 2 commits: git log -2
 
 To show commits in a single line: git log -2 --oneline
+
+
+
+====================CONFIGURING USER AND EMAIL:
+
+git config user.name "raham"
+git config user.email "raham@gmail.com"
+
+NOTE: this user and email will be replicated to new commits only.
+
+Git show: used to show the files which are attached to commits.
+git log --online
+git show commit_id
+
+
+======================BRANCHES:
+
+It is an individual line of development.
+Developers write the code on branches.
+Initially, branches are created on Git.
+After writing source code on Git, we push it to GitHub.
+The default branch is Master.
+
+Note: When we do an initial commit, the only default branch will be created.
+
+Dev --> Git (Movies branch) --> Code --> GitHub
+
+COMMANDS:
+
+git branch            : to list the branches
+git branch movies     : to create the branch "movies"
+git checkout movies   : to switch between the branches
+
+
 
