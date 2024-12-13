@@ -112,6 +112,17 @@ COMMANDS:
 git branch            : to list the branches
 git branch movies     : to create the branch "movies"
 git checkout movies   : to switch between the branches
+git checkout -b dth	: to create and switch dth at same time
+git branch -m old new	: to rename a branch
+git branch -D recharge	: to delete a branch
+
+NOTE: to recover the delete branch
+
+GIT PULL: it will get the branch from github to git
+git pull origin recharge
+git checkout recharge
+
+
 
 
 
@@ -122,8 +133,9 @@ git checkout movies
 touch movies{1..5}
 git add movies
 git commit -m "dev-1" movies
-NOW PUSH THE CODE TO GITHUB:
 
+
+NOW PUSH THE CODE TO GITHUB:
 # Create a repo
 git remote add origin https://github.com/nayakdebasish091/paytm.git
 
@@ -134,4 +146,37 @@ git push origin movies
 
 ====================TOKEN GENERATION:
 account -> settings -> developer settings -> PAT -> Classic -> Generate new token -> classic -> name: abcd -> select 6 options -> generate
+Note: it will be visible only once
+
+
+
+
+
+create branch
+switch to branch
+files
+add
+commit
+push
+
+GIT IGNORE: it will not track the files which we want.
+touch java{1..5}
+vim .gitignore
+j* -- > :wq
+git status
+you cant see the files now 
+
+
+GIT RESTORE: to untrack the tracked file
+touch raham
+git status
+git add
+git status
+git restore --staged raham
+git status
+
+
+GET BACK THE DELETED FILE:
+Note: we can restore only tracked files.
+
 
