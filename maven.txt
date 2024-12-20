@@ -1,0 +1,73 @@
+MAVEN:
+
+its a build tool.
+
+main file is POM.XML (project object model & language)
+
+it is used to create(artifact) (war, jar, ear)
+It is mostly used for java-based projects.
+
+It was initially released on 13 July 2004.
+Maven is written in java (1.8.0)
+
+RAW: .java (we cant use it)
+.java -- > compile -- > .class -- > .jar
+
+.class : which can be executable
+.jar : group of .class files (works for backend)
+.war : it has frontend and backend code (FE: HTML, CSS, JS & BE: JAVA)
+libs : its a pre defined packages used for code.
+
+ARTIFACTS: its the final product.
+JAR = JAVA ARCHIVE
+WAR = WEB ARCHIVE
+EAR = ENTERPRISE ARCHIVE
+
+
+ARCHITECTURE:
+
+SETUP: CREATE EC2
+
+yum install git java-1.8.0-openjdk maven tree -y
+
+git clone https://github.com/devopsbyraham/jenkins-java-project.git
+cd jenkins-java-project.git
+
+PLUGIN: its a small software which automates our work.
+with the plugins we can use tools without installing them.
+
+MAVEN follows a lifecycle
+
+
+
+MAVEN follows a lifecycle
+
+mvn compile : to compile the source code
+mvn test    : to test the code
+mvn package : to create artifact (project directory)
+mvn install : to create artifact (maven home dir. m2)
+mvn clean package: to perform entire goals
+mvn clean   : to delete artifact
+
+
+difference between maven and ant
+
+Maven
+pom.xml
+life cycle
+procedural
+plugins
+no scripts
+
+Ant
+build.xml
+no life cycle
+declarative
+no plugins
+scripts
+
+WHAT IF BUILD FAILS:
+
+CHECK JAVA VERSION FOR MAVEN
+CHECK POM.XML
+CHECK THE CODE
