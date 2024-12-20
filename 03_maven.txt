@@ -2,7 +2,7 @@ MAVEN:
 
 its a build tool.
 
-main file is POM.XML (project object model & language)
+main file is POM.XML (project object model & Extensible Markup language)
 
 it is used to create(artifact) (war, jar, ear)
 It is mostly used for java-based projects.
@@ -11,7 +11,7 @@ It was initially released on 13 July 2004.
 Maven is written in java (1.8.0)
 
 RAW: .java (we cant use it)
-.java -- > compile -- > .class -- > .jar
+.java -- > compile -- > .class -- > .jar-----(package)---> .war
 
 .class : which can be executable
 .jar : group of .class files (works for backend)
