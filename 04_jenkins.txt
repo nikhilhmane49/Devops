@@ -519,7 +519,7 @@ su - sonar
                   |
          run commnad : sh sonar.sh
                   |
-         run command : sh /opt/sonarqube-8.9.6.50800/bin/linux/sonar.sh start
+         run command : sh /opt/sonarqube-8.9.6.50800/bin/linux-x86-64/sonar.sh start
 		  |
 	copy public ip address with sonar ip (9000)
 ------------------------------------------------------------------------------------------------------------------
